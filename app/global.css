@@ -134,6 +134,10 @@ input:focus{
     box-shadow: #959da533 0 8px 24px;
     transition: all 0.3s ease;
     cursor: pointer;
+    min-width: 100px; /* Minimum genişlik */
+    min-height: 40px; /* Minimum yükseklik */
+    -webkit-tap-highlight-color: transparent; /* Dokunma vurgusunu kaldır */
+    touch-action: manipulation; /* Dokunma davranışını optimize et */
 }
 
 .prompt-sg-btn:hover {
