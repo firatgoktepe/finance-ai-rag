@@ -1,6 +1,6 @@
 const PromptSuggestionBtnMobile = ({ text, onClick }) => {
   return (
-    <button className="prompt-sug-btn" onTouchStart={onClick}>
+    <button className="prompt-sug-btn" onClick={onClick}>
       {text}
     </button>
   );
