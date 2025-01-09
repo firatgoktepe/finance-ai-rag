@@ -1,6 +1,7 @@
 *{
     font-family: Verdana,Tahoma, sans-serif;
     height: auto;
+    touch-action: manipulation;
 }
 
 body{
