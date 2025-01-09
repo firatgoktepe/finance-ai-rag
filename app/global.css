@@ -1,5 +1,6 @@
 *{
     font-family: Verdana,Tahoma, sans-serif;
+    height: auto;
 }
 
 body{
@@ -8,16 +9,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-image: url("../assets/FinGPTbg.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100%;
 }
 
 main{
     width:80vw;
-    height:80vw;
+    height:auto;
     background: linear-gradient(to bottom,#fdfdfd,#faf8ff);
     border-radius:15px;
     display: flex;
@@ -33,14 +32,12 @@ main{
 @media (max-width: 768px) {
     main {
         width: 90vw;
-        height: 90vh;
     }
 }
 
 @media (min-width: 1200px) {
     main {
         width: 70vw;
-        height: 70vh;
     }
 }
 
@@ -49,7 +46,7 @@ section{
 }
 
 section.populated{
-    height:100%;
+    height:auto;
     display: flex;
     flex-direction:column;
     justify-content: flex-end;
@@ -78,7 +75,7 @@ input.questionbox{
 }
 
 input[type=submit]{
-    width:15%;
+    width:auto;
     padding:10px;
     font-size: 15px;
     border:none;
