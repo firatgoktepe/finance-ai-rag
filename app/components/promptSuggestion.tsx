@@ -1,8 +1,6 @@
-import useIsMobile from "../hooks/useIsMobile";
 import PromptSuggestionBtn from "./promptsuggestionbtn";
 
 const PromptSuggestion = ({ onPromptClick }) => {
-  const useMobile = useIsMobile();
   const prompts = [
     "who is founder of stock?",
     "what is difference between mutual fund and stock?",
