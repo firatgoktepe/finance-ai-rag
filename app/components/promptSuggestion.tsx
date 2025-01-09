@@ -1,6 +1,5 @@
 import useIsMobile from "../hooks/useIsMobile";
 import PromptSuggestionBtn from "./promptsuggestionbtn";
-import PromptSuggestionBtnMobile from "./promptSuggestionBtnMobile";
 
 const PromptSuggestion = ({ onPromptClick }) => {
   const useMobile = useIsMobile();
@@ -12,21 +11,13 @@ const PromptSuggestion = ({ onPromptClick }) => {
   ];
   return (
     <div className="prompt-sug">
-      {!useMobile
-        ? prompts.map((prompt, index) => (
-            <PromptSuggestionBtn
-              key={`suggestion-${index}`}
-              text={prompt}
-              onClick={() => onPromptClick(prompt)}
-            />
-          ))
-        : prompts.map((prompt, index) => (
-            <PromptSuggestionBtnMobile
-              key={`suggestion-${index}`}
-              text={prompt}
-              onClick={() => onPromptClick(prompt)}
-            />
-          ))}
+      {prompts.map((prompt, index) => (
+        <PromptSuggestionBtn
+          key={`suggestion-${index}`}
+          text={prompt}
+          onClick={() => onPromptClick(prompt)}
+        />
+      ))}
     </div>
   );
 };
