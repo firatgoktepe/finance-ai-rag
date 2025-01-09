@@ -118,16 +118,18 @@ input:focus{
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
-.prompt-sg-btn{
+.prompt-sug-btn{
     padding: 12px 18px;
     font-size: 16px;
     border: none;
     background-color: #fff;
     border-radius: 25px;
     color: #383838;
+    cursor: pointer;
     box-shadow: #959da533 0 8px 24px;
     transition: all 0.3s ease;
     min-width: 100px; /* Minimum genişlik */
