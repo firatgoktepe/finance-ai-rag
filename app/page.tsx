@@ -39,7 +39,7 @@ const Home = () => {
             <p className="starter-text">
               This is Place for Financial terms!! Ask FinGPT anything about
               Fintech and it will answer back with most up-to-date answers. I
-              hope you njoy
+              hope you enjoy
             </p>
             <br />
             <PromptSuggestion onPromptClick={handlePrompt} />
