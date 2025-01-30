@@ -77,7 +77,20 @@ export async function POST(req: Request) {
           * Add class="finance-table" to the table element \n
           * Use <th> for header cells \n
           * Structure data in a clear and organized manner \n
-        - HTML tables are allowed, other HTML tags should be avoided \n\n
+        - If the response involves numerical data that would be better visualized as a chart: \n
+          * Wrap chart in its own paragraph for better rendering \n
+          * Use <chart type="pie|line|bar" data={"labels":[],"values":[],"title":""}> syntax \n
+          * Choose chart type based on data type: \n
+            - Pie charts for proportions and percentages \n
+            - Line charts for time series or trends \n
+            - Bar charts for comparisons between categories \n
+          * Example for pie chart: \n
+            <chart type="pie" data={"labels":["Stocks","Bonds"],"values":[60,40],"title":"Portfolio Distribution"}> \n
+          * Example for line chart: \n
+            <chart type="line" data={"labels":["Jan","Feb","Mar"],"values":[100,120,115],"title":"Stock Performance"}> \n
+          * Example for bar chart: \n
+            <chart type="bar" data={"labels":["Fund A","Fund B","Fund C"],"values":[45,65,52],"title":"Fund Returns"}> \n
+        - HTML tables and charts are allowed, other HTML tags should be avoided \n\n
         -----------
         START CONTEXT
         ${docContext}
