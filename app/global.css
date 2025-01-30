@@ -169,3 +169,58 @@ input:focus {
     background-size: 33% 100%, 33% 100%, 33% 0;
   }
 }
+
+.finance-table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.finance-table thead {
+  background-color: #411b8d;
+  color: white;
+}
+
+.finance-table-header {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.finance-table-cell {
+  padding: 12px 15px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.finance-table tr:last-child .finance-table-cell {
+  border-bottom: none;
+}
+
+.finance-table tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+  .finance-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .finance-table thead {
+    position: sticky;
+    left: 0;
+  }
+}

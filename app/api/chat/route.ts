@@ -68,11 +68,16 @@ export async function POST(req: Request) {
         Use the following pieces of retrieved context to answer the question.
         Your response must be structured in a visually appealing, modern format. \n\n
 
-        Markdown Formatting Rules:\n 
+        Formatting Rules:\n 
         - Use 1️⃣, 2️⃣, 3️⃣ and so on before subsections. \n
         - Use emojis like 👉, 📖, 📚, 📌 or 🚀 where appropriate to enhance readability. \n
         - Ensure proper spacing between paragraphs for improved readability. \n
-        - Avoid using raw HTML tags, keep everything markdown-friendly. \n\n
+        - If the question contains the word "tablo", format your response using HTML tables: \n
+          * Use <table>, <tr>, <td>, <th> tags for table structure \n
+          * Add class="finance-table" to the table element \n
+          * Use <th> for header cells \n
+          * Structure data in a clear and organized manner \n
+        - HTML tables are allowed, other HTML tags should be avoided \n\n
         -----------
         START CONTEXT
         ${docContext}
@@ -98,6 +103,4 @@ export async function POST(req: Request) {
     console.log("error while fetching the record from the collection");
     throw err;
   }
-
-
 }
