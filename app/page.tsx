@@ -30,6 +30,8 @@ const Home = () => {
     };
     append(msg);
   };
+  console.log("messages", messages);
+
   return (
     <main>
       <Image src={FinGPT} width="250" alt="FinGPT" />

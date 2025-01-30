@@ -8,7 +8,13 @@ const {
   ASTRA_DB_API_ENDPOINT,
   ASTRA_DB_APPLICATION_TOKEN,
   OPENAI_API_KEY,
-} = process.env;
+} = process.env as unknown as {
+  ASTRA_DB_NAMESPACE: string;
+  ASTRA_DB_COLLECTION: string;
+  ASTRA_DB_API_ENDPOINT: string;
+  ASTRA_DB_APPLICATION_TOKEN: string;
+  OPENAI_API_KEY: string;
+};
 
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,
@@ -59,7 +65,14 @@ export async function POST(req: Request) {
         The context will provide you with the most recent page data from Wikipedia and others. 
         If the context doesn't include the information you need, answer based on your existing knowledge and don't mention the source of your information or 
         what the context does or doesn't include. Format responses using markdown where applicable and don't return images.
+        Use the following pieces of retrieved context to answer the question.
+        Your response must be structured in a visually appealing, modern format. \n\n
 
+        Markdown Formatting Rules:\n 
+        - Use 1️⃣, 2️⃣, 3️⃣ and so on before subsections. \n
+        - Use emojis like 👉, 📖, 📚, 📌 or 🚀 where appropriate to enhance readability. \n
+        - Ensure proper spacing between paragraphs for improved readability. \n
+        - Avoid using raw HTML tags, keep everything markdown-friendly. \n\n
         -----------
         START CONTEXT
         ${docContext}
